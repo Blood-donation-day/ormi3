@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>회원가입</title>
   </head>
   <body>
     <h1>회원가입</h1>
-    
+    <hr>
     <p>원활한 서비스 이용을 위해 회원가입을 진행해 주세요.</p>
     
     <!-- 회원가입 정보입력 -->
@@ -26,7 +26,6 @@
     
     <br>
     <!-- 성별 고르기 raido / 같은 name중에 하나 선택 -->
-    <!-- 중간점 찍어야함   ·  <ul> <li> -->
     <fieldset class="filedset" >
       <legend><strong>성별</strong></legend>
       
@@ -36,39 +35,52 @@
         <label for="male">남성</label>
         </li>
       
-      <input type="radio" name="gender" value="female" id="female"> 
-      <label for="female">여성</label>
-      <br>
+        <li>
+        <input type="radio" name="gender" value="female" id="female"> 
+        <label for="female">여성</label>
+        </li>
 
-      <input type="radio" name="gender" value="none" id="none">
-      <label for="none">선택 안함</label>
-      </ul>
+        <li>
+        <input type="radio" name="gender" value="none" id="none">
+        <label for="none">선택 안함</label>
+        </li>
+    </ul>
     </fieldset>
 
     <!-- 사용기술 체크박스 -->
     <fieldset>
       <legend><strong>사용기술</strong></legend>
 
-      <input type="checkbox" value="html" id="html">
-      <label for="html">HTML</label>
-      <br>
-      <input type="checkbox" value="css" id="css">
-      <label for="css">CSS</label>
-      <br>
-      <input type="checkbox" value="javascript" id="javascript">
-      <label for="javascript">JavaScript</label>
-      <br>
-      <input type="checkbox" value="python" id="python">
-      <label for="python">Python</label>
-      <br>
-      <input type="checkbox" value="django" id="django">
-      <label for="django">Django</label>
-      <br>
-      <input type="checkbox" value="github" id="github">
-      <label for="github">GitHub</label>
-      <br>
-      <input type="checkbox" value="postgresql" id="posygresql">
-      <label for="postgresql">PostgreSQL</label>
+      <ul>
+        <li>
+          <input type="checkbox" value="html" id="html">
+          <label for="html">HTML</label>
+        </li>
+        <li>
+          <input type="checkbox" value="css" id="css">
+          <label for="css">CSS</label>
+        </li>
+        <li>
+          <input type="checkbox" value="javascript" id="javascript">
+          <label for="javascript">JavaScript</label>
+        </li>
+        <li>
+          <input type="checkbox" value="python" id="python">
+          <label for="python">Python</label>
+        </li>
+        <li>
+          <input type="checkbox" value="django" id="django">
+          <label for="django">Django</label>
+        </li>
+        <li>
+          <input type="checkbox" value="github" id="github">
+          <label for="github">GitHub</label>
+        </li>
+        <li>
+          <input type="checkbox" value="postgresql" id="posygresql">
+          <label for="postgresql">PostgreSQL</label>
+        </li>
+      </ul>
       
     </fieldset>
     
