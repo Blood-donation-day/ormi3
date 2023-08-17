@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    
+    <p>원활한 서비스 이용을 위해 회원가입을 진행해 주세요.</p>
+    
+    <!-- 회원가입 정보입력 -->
+    <label for="user-id">아이디</label>
+    <input id="user-id" type="text" placeholder="아이디를 입력하세요.">
+    <br>
+    <label for="user-email">이메일</label>
+    <input email="user-email" type="email" autocomplete required placeholder="이메일을 입력하세요.">
+    <br>
+    <label for="user-password">비밀번호</label>
+    <input password="user-password" type="password" placeholder="비밀번호를 입력하세요.">
+    <br>
+    <label for="user-nickname">닉네임</label>
+    <input nickname="user-nickname" type="text" palceholder="닉네임을 입력하세요.">
+    
+    <br>
+    <!-- 성별 고르기 raido / 같은 name중에 하나 선택 -->
+    <!-- 중간점 찍어야함   ·  <ul> <li> -->
+    <fieldset class="filedset" >
+      <legend><strong>성별</strong></legend>
+      
+      <ul>
+        <li>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">남성</label>
+        </li>
+      
+      <input type="radio" name="gender" value="female" id="female"> 
+      <label for="female">여성</label>
+      <br>
+
+      <input type="radio" name="gender" value="none" id="none">
+      <label for="none">선택 안함</label>
+      </ul>
+    </fieldset>
+
+    <!-- 사용기술 체크박스 -->
+    <fieldset>
+      <legend><strong>사용기술</strong></legend>
+
+      <input type="checkbox" value="html" id="html">
+      <label for="html">HTML</label>
+      <br>
+      <input type="checkbox" value="css" id="css">
+      <label for="css">CSS</label>
+      <br>
+      <input type="checkbox" value="javascript" id="javascript">
+      <label for="javascript">JavaScript</label>
+      <br>
+      <input type="checkbox" value="python" id="python">
+      <label for="python">Python</label>
+      <br>
+      <input type="checkbox" value="django" id="django">
+      <label for="django">Django</label>
+      <br>
+      <input type="checkbox" value="github" id="github">
+      <label for="github">GitHub</label>
+      <br>
+      <input type="checkbox" value="postgresql" id="posygresql">
+      <label for="postgresql">PostgreSQL</label>
+      
+    </fieldset>
+    
+    <!-- 회원가입 버튼 -->
+    <button type="submit">회원가입</button>
+
+
+  
+  </body>
+</html>
