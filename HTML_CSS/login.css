@@ -19,7 +19,7 @@ body {
     background-color: whitesmoke;
 }
 
-[type="text"] {
+input[type="text"] {
     margin:auto;
     width:70vw;
     height:8vw;
@@ -29,7 +29,7 @@ body {
     margin:20px;    
 }
 
-[type="password"] {
+input[type="password"] {
     width:70vw;
     height:8vw;
     font-size:3vw;
@@ -39,21 +39,21 @@ body {
     margin:20px;
 }
 
-[for="user-id"] {  
+label[for="user-id"] {  
     font-size: 4vw;
     padding: 0 0 0 4vw;
     vertical-align: middle;    
 }
 
 
-[for="user-password"] {  
+label[for="user-password"] {  
     font-size: 4vw;
     vertical-align:-20%;
     padding:0 0px 30px 0px;
     
 }
 
-[type="submit"] {
+input[type="submit"] {
     font-size: 3vw;
     text-align:center;
     background-color: #5147db;
