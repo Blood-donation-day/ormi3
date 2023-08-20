@@ -1,4 +1,6 @@
-
+/* * {
+    폰트지정
+} */
 
 tr[class="title"]{
     font-size:25px;
@@ -37,14 +39,15 @@ td[id="writer"] {
 }
 
 td[id="border"] {
-    border-left:1px solid #0f0f0fee;
-    border-right:1px solid #0f0f0fee;
+    border-left:1px solid  rgba(15, 15, 15, 0.1);
+    border-right:1px solid rgba(15, 15, 15, 0.1);
     text-align: center;
     width:180px
 }
 
 td[id="view"] {
-    text-align: center;  
+    text-align: center; 
+    width: 150px; 
 }
 
 .est, h3, h4, ul, p, ol, a {
@@ -56,7 +59,7 @@ h3 {
 }
 
 ul, ol {
-    margin:10px;
+    margin:10px 0 0 30px;
     padding-bottom: 10px;
 }
 
@@ -72,3 +75,4 @@ hr[id="end"] {
     background-color: #eeee;
     border:0px;
 }
+
