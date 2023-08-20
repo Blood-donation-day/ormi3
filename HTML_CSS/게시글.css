@@ -1,0 +1,74 @@
+
+
+tr[class="title"]{
+    font-size:25px;
+    font-weight:bold;
+}
+
+/* 구분선과 테이블 여백없이 이어븥이기 */
+
+hr {
+    margin:0;
+    width:90vw;
+
+    height:2px;
+    background-color: black;
+}
+
+table{
+    margin:0 0 20px 0px;
+    width:90vw;
+            /* 색상 #eeeee */
+    background-color: #eeee;
+
+}
+
+h1 {
+   vertical-align: top;
+}
+
+
+td[id="empty"] {
+    padding:0px 400px 0 0;
+}
+
+td[id="writer"] {
+   width: 150px;  
+}
+
+td[id="border"] {
+    border-left:1px solid #0f0f0fee;
+    border-right:1px solid #0f0f0fee;
+    text-align: center;
+    width:180px
+}
+
+td[id="view"] {
+    text-align: center;  
+}
+
+.est, h3, h4, ul, p, ol, a {
+    margin:0 0 0 30px; 
+}
+
+h3 {
+    padding-top:30px;
+}
+
+ul, ol {
+    margin:10px;
+    padding-bottom: 10px;
+}
+
+p[id="link"] {
+    margin:0px;
+    padding-bottom: 20px;
+}
+
+hr[id="end"] {
+    margin:0;
+    width:90vw;
+    height:2px;
+    background-color: #eeee;
+    border:0px;
+}
