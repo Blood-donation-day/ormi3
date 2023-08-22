@@ -1,0 +1,101 @@
+/* 초기화 reset ------------------------ */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+fieldset,
+legend,
+ul, ol, li{
+  margin: 0;
+  padding: 0;
+  border: 0px;
+}
+/* ----------------------------- */
+
+
+h2{
+  margin: 10px 0 20px 20px;
+  font-size:40px;
+}
+
+/* table에는 flex적용이 어려움 
+td안에 넣고 일부요소에 적용 */
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+  margin:0 0 0 20px;
+}
+
+.view-table  {
+  background-color: #eee;
+  font-size:15px;
+  border-top: black solid 2px;
+}
+
+.number {
+  width:80px;
+}
+
+.title {
+  width:500px
+}
+
+.writer, view {
+  width:80px;
+}
+
+.date {
+  width:120px;
+}
+
+.view {
+  padding: 7px 20px 7px 0;
+}
+
+.view-contents {
+  border-top:#929292 solid 1px; 
+  border-bottom:#929292 solid 1px;
+}
+
+/* nth-child(2) 번째 */
+td:nth-child(2) {
+  text-align: start;
+  /* 텍스트 땡기기 */
+  text-indent: 10px;
+}
+/* 링크 밑줄 삭제 */
+a {
+  text-decoration:none;
+}
+
+/* 폰트 적용해보기 */
+
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'HakgyoansimWoojuR';
+}
+
+/* 글쓰기 버튼 추가 및 게시판 글작성으로 이동되게 */
+
+.flex1 {
+  width:860px;
+  display:flex;
+  margin:10px 0 10px 0;
+  flex-flow:row-reverse;
+  justify-content:right;
+}
+
+#link-write {
+  width:100px;
+  height:25px;
+}

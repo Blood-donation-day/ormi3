@@ -1,0 +1,216 @@
+/* .chat-layout {
+    background-color: rgb(168, 168, 168);
+    overflow-y: auto;
+    height:500px;
+}
+
+.chat{
+    margin-left: 50px;;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+.chat-content{
+    border-radius: 10px;
+
+
+하얀색 배경 채팅창 위에있고 밑에 마진5가 들어감 수정 필요
+사자사진 오른쪽에 채팅창이 위치해야함 (현재 위에 있어 수정필요)
+p.chat-lion {
+    background-color: white;
+    width: fit-content;
+    padding:5px 10px 10px 10px;
+    margin-bottom: 5px;
+   높이 보정  중앙에
+    line-height: 27px;  
+}
+
+
+div 안에서 flex로 오른쪽 보내려니까 fit-content때문에 
+문제가 생김 
+p 태그에다가 걸어서 문제해결 
+
+div.chat-me {
+    display:flex;
+    justify-content: end;
+    align-items: end;
+    flex-flow:column;
+}
+
+p.chat-me {
+    background-color: #dae3fd;
+    width:fit-content;
+    padding:5px 10px 10px 10px;
+    margin: 5px;
+}
+
+
+
+div.chat-lion {
+    display:flex;
+    align-items:end;
+    gap:10px;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    padding: 50px 0 50px 0;
+    border-radius: 16px;
+    align-items: center;
+    width:1000px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+textarea {
+    width:100%;
+    height:6.25em;
+    resize: none;
+    border:yellowgreen 2px solid;
+    font-size:20px;
+}
+
+.send-btn {
+    width:100px;
+    height:100px;
+    background-color: royalblue;
+    color:white;
+    border-radius: 20px;
+    font-size:30px;
+    margin-left:30px;
+    margin-right:30px;
+    
+}
+
+.send-btn:hover {
+    background-color: aqua;
+    transition:2s;
+}
+/*  */
+
+
+
+
+.chat{
+    width:1000px;
+    margin: auto;
+  }
+  
+  .chat-container{
+    background-color: #eee;
+    padding:24px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+  }
+  .chat-container h3{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .chat-content{
+    background-color: white;
+    border-radius: 0 20px 20px 20px;
+    padding:12px 20px;
+    width:fit-content;
+    
+  }
+  
+  .ai-chat{
+    align-items: start;
+    display: flex;
+    gap:10px  
+  }
+  
+  .ai-chat .chat-wrap, 
+  .user-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap:6px;
+  }
+  
+  .ai-chat img{
+    width: 60px;
+  }
+  
+  .ai-chat .chat-content:first-child{
+    margin-top:30px;
+  }
+  .user-chat .chat-content{
+    background-color: rgb(177, 226, 245);
+    border-radius: 20px 20px 0 20px;
+  }
+  
+  /* form */
+  .chat-form{
+    background-color: white;
+    display: flex;
+    padding:10px;
+    border-radius: 16px;
+    align-items: center;
+    gap:10px;
+    margin-top:20px;
+  }
+  .chat-form textarea{
+    border: 0;
+    resize: none;
+    flex-grow: 1;
+    height: 60px;
+  }
+  .chat-form button{
+    background-color: royalblue;
+    border: 0;
+    color:white;
+    width:80px;
+    height:32px;
+    border-radius: 10px;
+  }
+  
+  
+  .chat-screen{
+    height:600px;
+    overflow-y: auto;
+  
+    mask-image: linear-gradient(0deg, transparent 0%, black 10%);
+      -webkit-mask-image: linear-gradient(0deg, transparent 0%, black 10%);
+  
+  }
+
+  span.layout-title {
+    font-weight: bold;
+    font-size:25px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    padding-left:30px;
+    
+}
+
+div.layout {
+  display:flex;
+  border-bottom: 1px #eee solid;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+span.layout {
+
+  align-items: center;
+  padding-bottom:20px ;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  padding:0 10px 0 10px;
+}
+
+#2 {
+  font-size: 50px;
+  background-color: aqua;
+}
+
+

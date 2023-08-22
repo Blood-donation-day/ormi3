@@ -1,0 +1,129 @@
+
+/* 버튼에 마우스 올리면 천천히 색깔 변화 */
+input[id="submit"]:hover {
+    background-color: royalblue;
+    transition:2s;
+}
+
+.description {
+  padding:20px 0 15px 0;
+  border-bottom: 2px solid black;
+}
+
+.flex-container {
+    display:flex;
+    flex-flow: column;
+}
+/*------ 카테고리,제목,내용,파일첨부------ */
+label[for=category], label[for=title], label[for=write], label[for=attach]
+{
+  background-color: #eee;
+  border-collapse:collapse;
+  display:inline-block;
+  width:200px;
+  text-align: center;
+  font-weight:bold;
+  font-family: 'Pretendard-Bold';
+}
+
+label[for=category]{
+  height:50px;
+  line-height: 50px;
+}
+
+label[for=title] {
+  height:50px;
+  line-height: 50px;
+}
+
+label[for=write] {
+  height:400px;
+  line-height: 400px;
+}
+
+label[for=attach] {
+  height:50px;
+  line-height: 50px;
+}
+
+/* --------------------- */
+
+/*리스트 텍스트박스  */
+
+div.title, div.category, div.write, div.file
+{
+  border-bottom:1px solid hwb(0 55% 45%);
+}
+
+select[id="list-category"] {
+  width:200px;
+  height:30px;
+  
+}
+
+input[id="title"]{
+  width:75%;
+}
+
+textarea {
+  vertical-align: middle;
+  height:350px;
+  width:75%;
+  resize: none;
+}
+
+div.submit {
+  display:flex;
+  flex-flow:row;
+  justify-content: right;
+  margin-top: 30px;
+  gap:30px;
+  margin-right: 30px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin:0 20px  0;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  transition: 2s;
+}
+
+a:hover, .button:hover{
+  background-color: aqua;
+  transition: 1s;
+}
+
+.button {
+  min-width: 50px;
+  background-color: #007bff;
+  transition: 2s;
+  color:white;
+  font-weight:bold;
+  border-radius: 3px;
+  border:0px;
+  cursor:pointer;
+}
+
+/* .ss {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.file input[type="file"] {
+  display: none;
+} */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="실습5 게시판 글작성.css">
+    <link rel="stylesheet" href="common.css">
+    <title>게시판 글작성</title>
+  </head>
+  <body>
+    <h1>글쓰기</h1>
+    <div class="description">내용을 입력해 주세요</div>
+    <form action="링크" method="post">
+    <div class="flex-container">
+        <div class="category">
+            <label for="category">카테고리</label>
+            <select id="list-category">
+                <optgroup label="카테고리">
+                    <option value="category-1">일반</option>
+                    <option value="category-2">공지사항</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="title">
+            <label for="title">제목</label>
+            <input id="title" type="text" placeholder="제목을 입력하세요.">
+        </div>
+        <div class="write">
+            <label for="write">내용</label>
+            <textarea  placeholder="내용을 입력하세요."></textarea>
+        </div>
+        <div class="file">
+            <label for="attach">파일첨부</label>
+            <input class="ss" type="file">
+        </div>
+        <div class="submit">
+            <a class="back-to-list" href="실습4 게시판 글목록.html">목록</a>
+            <input class="button" type="reset" value="초기화" id="back-to-list">
+            <input class="button" type="button" value="작성" >
+        </div>
+    </div>
+    </form>
+  </body>
+</html>

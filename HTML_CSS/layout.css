@@ -1,0 +1,49 @@
+    
+    span.layout-title {
+        font-weight: bold;
+        font-size:25px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        padding-left:30px;
+        
+    }
+    
+    div.layout {
+        display:flex;
+        border-bottom: 1px #eee solid;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    span.layout {
+
+        align-items: center;
+        padding-bottom:20px ;
+        padding-top: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        padding:0 10px 0 10px;
+    }
+    
+
+    .copyright {
+        height:50px;
+        background-color: #eee;
+        text-align: center;
+        width: 100%;
+        line-height: 50px;
+        position: fixed;
+        bottom:0;
+        /* 글자 중앙 고정 */
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    article {
+        display:flex;
+        height:800px;
+    }
