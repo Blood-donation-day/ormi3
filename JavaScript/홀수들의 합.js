@@ -16,3 +16,31 @@ const 홀수합계 = 홀수만.reduce((a, b) => a+b, 0);  //reduce로 `홀수만
 
 console.log(홀수만);
 console.log(`홀수들의 합은 ${홀수합계}입니다.`);
+
+
+
+//더 짧게 수정.
+
+function 홀수합치기함수(a,b) {
+    
+    if ( b % 2 === 1) {
+        return a + b;
+    } else {
+        return a;
+    };
+};
+
+const 홀수합 = homework.reduce(홀수합치기함수, 0) ;
+console.log(`답은 "${홀수합}" 입니다.`);
+
+
+//더더 짧게 수정
+
+console.log(`답은 "${homework.reduce((a, b) => 
+{
+    if (b % 2 === 1) {
+        return a + b;
+    } else {
+        return a;
+    }
+}, 0)}" 입니다.`);
