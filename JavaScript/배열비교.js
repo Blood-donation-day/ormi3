@@ -51,3 +51,36 @@ let result = 숫자배열.reduce((a, b ) => {
 }, 0); 
 
 console.log(result);
+
+
+// 배열 내용 복습
+const fruit = [`apple`, `melon`, `banana`];
+
+for (type of fruit) {
+  console.log(type);
+};
+
+for (i=0; i<fruit.length; i++) {
+  for (j = 0; j < 7; j++) {
+    console.log(fruit[i][j]);
+  }  
+};
+
+fruit.forEach((fruit, index) => console.log(fruit, index) );
+
+const fruit2 = [`사과`, `멜론`, `바나나`];
+const fruit3 = fruit.concat(fruit2);
+console.log(fruit3);
+
+const finder = (name) => console.log(`찾고 계신 ${name}은 ${fruit3.indexOf(name) + 1}번째에 있습니다.`)
+function search (ary, name) {
+  if (ary.includes(name)) {
+    console.log(`찾고 계신 ${name}은 ${ary.indexOf(name) + 1 }번째에 있습니다.`)
+  } else {
+    console.log(`해당 과일을 찾을 수 없습니다.`)
+  }
+}
+
+finder(`바나나`)
+search(fruit2, `멜론`)  //찾는 과일이 없는 경우 추가
+
