@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+  </head>
+  <body>
+	<style>
+		body {
+			background: black;
+			height: 6000px;
+			font-family: 'nanumsquare'
+		}
+
+		div {
+			margin-top: 1000px;
+			color: white;
+			text-align: center;
+			font-size: 50px;
+			opacity: 0;
+			transform: rotate(-720deg);
+			transition:all 3s;
+		}
+		
+		hihi {
+			font-size: 500px;
+		}
+	</style>
+
+	<div><h1>한번 해보자</h1></div>
+	<div><h1>절대 '내가가장못해'를 검색하지 마!!!</h1></div>
+	<div><hihi>그는 심해야!!!!</hihi></div>
+	<div><img width="50%" src="https://cdn.discordapp.com/attachments/1000792779363995698/1147682470435749908/1692398735315.gif"></div>
+	<script>
+		
+		let one = new IntersectionObserver((e) => {
+			e.forEach((박스) => {
+				if (박스.isIntersecting){
+					박스.target.style.opacity = 1;
+					박스.target.style.transform = 'rotate(0deg)'
+				} else {
+					박스.target.style.opacity = 0;
+
+				}
+			})
+		})
+
+		let div = document.querySelectorAll('div')
+		one.observe(div[0])
+		one.observe(div[1])
+		one.observe(div[2])
+		one.observe(div[3])
+
+	</script>
+  </body>
+</html>
