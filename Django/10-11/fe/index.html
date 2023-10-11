@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프론트</title>
+  </head>
+  <body>
+    <script>
+      // http://127.0.0.1:8000/blog 에서 fetch로 데이터를json형식으로 가져와서
+      // 화면에 출력하는 코드
+      fetch("http://127.0.0.1:8000/blog")
+        .then(function (response) {
+          return response.json;
+        })
+        .then(function (myJson) {
+          console.log(myJson);
+        });
+    </script>
+  </body>
+</html>

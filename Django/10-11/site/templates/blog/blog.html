@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <img
+      width="500px"
+      src="https://cdn.discordapp.com/attachments/1135389938662248498/1161493170480218132/image.png?ex=65387fcf&is=65260acf&hm=2fd53c57b360a62d1771426db3f54ff2f5ebca64ad4b4b6adcdde36c3a6abb62&"
+    />
+
+    <h1>게시판</h1>
+    <form action="" method="get">
+      <input name="q" type="search" />
+      <button type="submit">검색</button>
+    </form>
+    <ul>
+      {% for post_detail in db %}
+      <li>
+        <a href="{% url 'post' post_detail.id %}">{{ post_detail.title }}</a>
+        <p>{{post_detail.contents}}</p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p>{% url 'blog' %}</p>
+    <p>{% url 'post' 1 %}</p>
+  </body>
+</html>

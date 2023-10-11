@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>게시판 글 목록</h1>
+    <form action="" method="get">
+      <input name="검색하기" type="search" />
+      <button type="submit">검색하기</button>
+    </form>
+    <ul>
+      {% for post in db %}
+      <li>
+        <a href="{% url 'post' post.id %}" style="text-decoration: none"
+          >{{ post.title}}
+          <div></div>
+          {{ post.updated_at }}</a
+        >
+      </li>
+      {% if post.main_image %}
+      <img
+        src="{{ post.main_image.url }}"
+        alt="{{ post.main_image }}"
+        width="200px"
+      />
+      {% endif %} {% endfor %}
+    </ul>
+  </body>
+</html>
