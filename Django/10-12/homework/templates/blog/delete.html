@@ -1,0 +1,13 @@
+<h1>블로그 글 삭제</h1>
+<p>{{post.title}}</p>
+<p>{{post.contents}}</p>
+<p>{{post.updated_at}}</p>
+{% if post.main_image %}
+<p><img width="300px" src="{{ post.main_image.url }}" alt="이미지임" /></p>
+{% endif %}
+<hr />
+<form method="post">
+  {% csrf_token %}
+  <p>블로그 글을 삭제하시겠습니까?</p>
+  <input type="submit" value="네!" class="btn btn-primary" />
+</form>

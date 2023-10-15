@@ -1,0 +1,14 @@
+<h1>비밀 게시판</h1>
+<p>비밀 게시판 입니다.</p>
+<form action="" method="get">
+  <input name="q" type="search" />
+  <button type="submit">검색</button>
+</form>
+<ul>
+  {% for post_detail in db %}
+  <li>
+    <a href="{% url 'post' post_detail.id %}">{{ post_detail.title }}</a>
+    <p>{{post_detail.contents}}</p>
+  </li>
+  {% endfor %}
+</ul>
