@@ -3,8 +3,9 @@
   <input name="q" type="search">
   <button type="submit">검색</button>
 </form>
+<button type="button" onclick="location.href='{% url "write" %}' ">글쓰기</button>
 <ul>
   {% for post in object_list %}
-  <li><a href="{% url "postdetail" post.pk %}"></a>{{post.title}}</li>
+  <li><a href="{% url "postdetail" post.pk %}">{{post.title}}</a></li>
   {% endfor %}
 </ul>
