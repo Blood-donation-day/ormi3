@@ -1,0 +1,8 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <p>{{ object.title }}</p>
+    <p>{{ object.content }}</p>
+    <p>삭제할꺼야?</p>
+    <button type="submit">네</button>
+</form>
+<a href="{% url "postdetail" object.pk %}"><button >아니요</button></a>
