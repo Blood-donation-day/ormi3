@@ -2,7 +2,7 @@
 <p>{{ post.author }}</p>
 <p>{{ post.content }}</p>
 {% if post.file_upload %}
-<video src="/media/{{ post.file_upload }}" controls width="50%" autobuffer>플레이</video>
+<video src="/media/{{ post.file_upload }}" controls width="50%" >플레이</video>
 {% endif %}
 <br />
 <p><a href="{% url "postlist" %}">글목록</a></p>
