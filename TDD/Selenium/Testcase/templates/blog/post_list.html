@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글목록</title>
+  </head>
+  <body>
+    <h2>글 목록</h2>
+    <input type="text" name="q" id="search-input">
+    <button id="search-btn">검색</button>
+    <section class='contents-section'>
+    {% if posts %}{% for i in posts %}
+    <h2 class='contents-heading'>{{ i.title }}</h2>
+    <p class='contents-text'>{{ i.content }}</p>
+    <p class='contents-updated'>{{ i.updated_at }}</p>
+    {% endfor %}
+    {% else %} <p class='contents-text'>게시물이 존재하지 않습니다. 첫번째 게시물에 주인공이 되세요!</p>
+    {% endif %}
+    </section>
+  </body>
+  <header></header>
+  <footer></footer>
+    <script>
+      document.querySelector('#search-btn').addEventListener('click', () => {
+          const searchInput = document.querySelector('#search-input');
+          const searchValue = searchInput.value;
+          location.href = `/blog/?q=${searchValue}`;
+      });
+  </script>
+</html>
+
+
