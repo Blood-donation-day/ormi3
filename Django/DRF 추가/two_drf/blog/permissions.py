@@ -9,7 +9,7 @@ from rest_framework import permissions
 #     '''
 #     # has_permission이 True여야 has_object_permission을 호출
     
-from rest_framework import permissions
+
 
 
 class IsAuthorOrReadOnly(permissions.BasePermission):
