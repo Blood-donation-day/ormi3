@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wenivgram</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eee;
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 15px;
+            padding-bottom: 5px;
+        }
+
+        .navbar {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: #fff;
+            width: 600px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .login-form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .login-form input {
+            width: 80%;
+            height: 40px;
+            border: 1px solid #ddd;
+            padding-left: 10px;
+            font-size: 1rem;
+        }
+
+        .login-form button {
+            width: 80%;
+            height: 40px;
+            border: 1px solid #ddd;
+            background: #0095f6;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .login-form button:hover {
+            background: #016db4;
+            color: #fff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>wenivgram</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li class="loginfield"><a href="#">My</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>로그인</h2>
+            <form class="login-form" id="login-form">
+                <input type="text" name="id" id="id" placeholder="아이디" />
+                <input type="password" name="pw" id="pw" placeholder="비밀번호" />
+                <button id="submit">로그인</button>
+            </form>
+            <p>아직도 아이디가 없으신가요? <a href="register.html">회원가입</a></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="copyright">
+            <p>ⓒ Copyright 2023. WENIV All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const loginForm = document.querySelector('#login-form');
+        const id = document.querySelector('#id');
+        const pw = document.querySelector('#pw');
+        const submit = document.querySelector('#submit');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = id.value;
+            const password = pw.value;
+            if (username === '') {
+                alert('아이디를 입력해주세요.');
+                id.focus();
+                return;
+            }
+            if (password === '') {
+                alert('비밀번호를 입력해주세요.');
+                pw.focus();
+                return;
+            }
+            fetch('http://127.0.0.1:8000/api/token/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+                .then(res => {
+                    const result = res.json()
+                    // console.log(res)
+                    // console.log(result)
+                    return result;
+                })
+                .then(res => {
+                    if (res.access) {
+                        localStorage.setItem('access_token', res.access);
+                        localStorage.setItem('refresh_token', res.refresh);
+                        location.href = 'index.html';
+                    } else {
+                        alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        });
+    </script>
+</body>
+
+</html>
